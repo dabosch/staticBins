@@ -1,0 +1,7 @@
+Bootstrap: docker
+From:ubuntu:23.04
+
+%post
+    apt update && apt install --yes build-essential wget git upx libncurses-dev
+%runscript
+    bash "$@" 
