@@ -11,12 +11,12 @@ Compilation requires apptainer to be installed. This is not needed for executing
 - for building a single application, type e.g. `make nano`
 - you can also build all with `make all`
 
-## List and Version of tools
-+------+-------:+
-| btop | -      |
-| htop | 3.3.0  |
-| nano | 7.2    |
-| ncdu | 2.3    |
-| nnn  | 4.9    |
-| pv   | 1.8.5  |
-+------+--------+
+## List of tools
+| tool | version |
+|------|--------:|
+| btop | -       |
+| htop | 3.3.0   |
+| nano | 7.2     |
+| ncdu | 2.3     |
+| nnn  | 4.9     |
+| pv   | 1.8.5   |
