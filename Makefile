@@ -19,7 +19,5 @@ buildcontainer.sif:buildcontainer.txt
 bin/% : script/%.sh
 	mkdir -p ./bin
 	./buildcontainer.sif $<
-test:
-	echo "${SOURCES}"
 
-$(SOURCES): %: container bin/%
+$(SOURCES): %: bin/% | container
