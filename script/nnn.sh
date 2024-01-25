@@ -9,6 +9,7 @@ tar -xzf "nnn-static-${VERSION}.x86_64.tar.gz"
 
 # don't use upx: nnn is already packed by the maintainer (as of version 4.9)
 # upx nnn-static
+touch nnn-static
 mv ./nnn-static ../bin/nnn
 
 popd

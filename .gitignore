@@ -1,3 +1,4 @@
 bin/
 buildcontainer.sif
 temp/
+staticBins_dabosch_*.tar

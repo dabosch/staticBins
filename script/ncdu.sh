@@ -8,6 +8,7 @@ wget "$URL"
 tar -xzf "ncdu-${VERSION}-linux-x86_64.tar.gz"
 
 upx ./ncdu
+touch ./ncdu
 mv ./ncdu ../bin/
 
 popd
