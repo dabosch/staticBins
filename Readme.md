@@ -15,16 +15,22 @@ Compilation requires apptainer to be installed. This is not needed for executing
 | tool | version |
 |------|--------:|
 | [btop][btop] | 1.3.0   |
-| htop | 3.3.0   |
-| nano | 7.2     |
-| ncdu | 2.3     |
+| [htop][htop] | 3.3.0   |
+| [nano][nano] | 7.2     |
+| [ncdu][ncdu] | 2.3     |
 | [nmon][nmon] | 16p     |
-| nnn  | 4.9     |
-| pigz | 2.8     |
-| pv   | 1.8.5   |
-| tree | 2.1.1   |
+| [nnn][nnn]   | 4.9     |
+| [pigz][pigz] | 2.8     |
+| [pv][pv]     | 1.8.5   |
+| [tree][tree] | 2.1.1   |
 
 
-[btop](https://github.com/aristocratos/btop)
-[nmon](https://nmon.sourceforge.io/pmwiki.php)
-
+[btop]:https://github.com/aristocratos/btop
+[htop]:https://htop.dev/
+[nano]:https://www.nano-editor.org/
+[ncdu]:https://dev.yorhel.nl/ncdu
+[nmon]:https://nmon.sourceforge.io/pmwiki.php
+[nnn]:https://github.com/jarun/nnn
+[pigz]:https://zlib.net/pigz/
+[pv]:http://www.ivarch.com/programs/pv.shtml
+[tree]:http://oldmanprogrammer.net/source.php?dir=projects/tree
