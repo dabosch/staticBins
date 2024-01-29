@@ -19,4 +19,7 @@ Compilation requires apptainer to be installed. This is not needed for executing
 | nano | 7.2     |
 | ncdu | 2.3     |
 | nnn  | 4.9     |
+| pigz | 2.8     |
 | pv   | 1.8.5   |
+| tree | 2.1.1   |
+

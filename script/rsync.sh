@@ -10,7 +10,7 @@ tar -xzf "v${VERSION}.tar.gz"
 cd "rsync-${VERSION}"
 
 ./configure --enable-static
-make
+make LDFLAGS=-static
 upx ./rsync
 mv ./rsync ../../bin/
 popd

@@ -9,5 +9,7 @@ From:ubuntu:23.04
     apt install -y gcc g++ gawk autoconf automake python3-cmarkgfm \
     acl libacl1-dev attr libattr1-dev libxxhash-dev libzstd-dev \
     liblz4-dev libssl-dev
+    # dependencies for pigz
+    apt install -y libz-dev
 %runscript
     bash "$@" 
