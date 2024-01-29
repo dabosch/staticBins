@@ -14,12 +14,17 @@ Compilation requires apptainer to be installed. This is not needed for executing
 ## List of tools
 | tool | version |
 |------|--------:|
-| btop | 1.3.0   |
+| [btop][btop] | 1.3.0   |
 | htop | 3.3.0   |
 | nano | 7.2     |
 | ncdu | 2.3     |
+| [nmon][nmon] | 16p     |
 | nnn  | 4.9     |
 | pigz | 2.8     |
 | pv   | 1.8.5   |
 | tree | 2.1.1   |
+
+
+[btop](https://github.com/aristocratos/btop)
+[nmon](https://nmon.sourceforge.io/pmwiki.php)
 
