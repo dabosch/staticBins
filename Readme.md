@@ -14,7 +14,7 @@ Compilation requires apptainer to be installed. This is not needed for executing
 ## List of tools
 | tool | version |
 |------|--------:|
-| btop | -       |
+| btop | 1.3.0   |
 | htop | 3.3.0   |
 | nano | 7.2     |
 | ncdu | 2.3     |
