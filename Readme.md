@@ -15,6 +15,7 @@ Compilation requires apptainer to be installed. This is not needed for executing
 | tool | version |
 |------|--------:|
 | [btop][btop] | 1.3.0   |
+| [fzf][fzf]   | 0.47.0  |
 | [htop][htop] | 3.3.0   |
 | [nano][nano] | 7.2     |
 | [ncdu][ncdu] | 2.3     |
@@ -34,3 +35,4 @@ Compilation requires apptainer to be installed. This is not needed for executing
 [pigz]:https://zlib.net/pigz/
 [pv]:http://www.ivarch.com/programs/pv.shtml
 [tree]:http://oldmanprogrammer.net/source.php?dir=projects/tree
+[fzf]:https://github.com/junegunn/fzf.git

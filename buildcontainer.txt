@@ -3,13 +3,21 @@ From:ubuntu:23.04
 
 %post
     apt update 
+    PACKAGES=""
     # general setup
-    apt install --yes build-essential wget git upx libncurses-dev
+    PACKAGES="${PACKAGES} build-essential wget git upx libncurses-dev libgpm-dev cmake"
     # dependencies for building rsync
-    apt install -y gcc g++ gawk autoconf automake python3-cmarkgfm \
+    PACKAGES="${PACKAGES} gcc g++ gawk autoconf automake python3-cmarkgfm \
     acl libacl1-dev attr libattr1-dev libxxhash-dev libzstd-dev \
-    liblz4-dev libssl-dev
+    liblz4-dev libssl-dev"
     # dependencies for pigz
-    apt install -y libz-dev
+    PACKAGES="${PACKAGES} libz-dev"
+    # golang (fzf)
+    PACKAGES="${PACKAGES} golang-go"
+    # nnn
+    PACKAGES="${PACKAGES} libreadline-dev"
+    
+    apt install -y ${PACKAGES}
+    
 %runscript
     bash "$@" 

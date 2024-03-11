@@ -1,17 +1,11 @@
 set -e
-VERSION="3.2.7"
-URL="https://github.com/WayneD/rsync/archive/refs/tags/v${VERSION}.tar.gz"
+VERSION="v3.2.7"
+URL="https://github.com/WayneD/rsync"
 
-mkdir -p ./temp
-pushd ./temp
-wget "$URL"
-tar -xzf "v${VERSION}.tar.gz"
+git clone --depth 1 --branch "${VERSION}" "${URL}"
 
-cd "rsync-${VERSION}"
-
+cd rsync
 ./configure --enable-static
 make LDFLAGS=-static
 upx ./rsync
-mv ./rsync ../../bin/
-popd
-rm -rf ./temp
+mv ./rsync ../bin/
