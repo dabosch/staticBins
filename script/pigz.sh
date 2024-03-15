@@ -7,6 +7,8 @@ tar -xzf "pigz-${VERSION}.tar.gz"
 cd "pigz-${VERSION}"
 
 make LDFLAGS=-static
+strip ./pigz
+strip ./unpigz
 upx ./pigz
 upx ./unpigz
 

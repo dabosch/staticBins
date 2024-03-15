@@ -9,5 +9,6 @@ cd "pv-${VERSION}"
 
 ./configure --enable-static
 make
+strip ./pv
 upx ./pv
 mv ./pv ../bin/

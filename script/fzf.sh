@@ -6,6 +6,7 @@ git clone --depth 1 --branch "${VERSION}" "${URL}"
 
 cd fzf
 make bin/fzf
+strip ./bin/fzf
 upx ./bin/fzf
 
 cp ./bin/fzf ../bin/fzf

@@ -9,5 +9,6 @@ cd "htop"
 ./autogen.sh
 ./configure --enable-static
 make -j4
+strip ./htop
 upx ./htop
 mv ./htop ../bin/

@@ -6,6 +6,7 @@ git clone --depth 1 --branch "${VERSION}" "${URL}"
 cd "unix-tree"
 
 make LDFLAGS=-static
+strip ./tree
 upx ./tree
 
 mv ./tree ../bin/

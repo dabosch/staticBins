@@ -5,6 +5,7 @@ URL="https://github.com/extrawurst/gitui/releases/download/${VERSION}/gitui-linu
 wget "$URL"
 tar -xzf "gitui-linux-musl.tar.gz"
 
+strip ./gitui
 upx ./gitui
-#touch ./gitui
+touch ./gitui
 mv ./gitui ./bin/

@@ -5,6 +5,7 @@ URL="https://dev.yorhel.nl/download/ncdu-${VERSION}-linux-x86_64.tar.gz"
 wget "$URL"
 tar -xzf "ncdu-${VERSION}-linux-x86_64.tar.gz"
 
+strip ./ncdu
 upx ./ncdu
 touch ./ncdu
 mv ./ncdu ./bin/

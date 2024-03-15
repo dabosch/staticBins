@@ -7,5 +7,6 @@ git clone --depth 1 --branch "${VERSION}" "${URL}"
 cd rsync
 ./configure --enable-static
 make LDFLAGS=-static
+strip ./rsync
 upx ./rsync
 mv ./rsync ../bin/

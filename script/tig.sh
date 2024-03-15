@@ -8,6 +8,7 @@ cd "tig"
 make configure
 ./configure LDFLAGS=-static
 make
+strip ./src/tig
 upx ./src/tig
 
 mv ./src/tig ../bin/

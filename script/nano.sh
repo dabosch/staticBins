@@ -9,5 +9,6 @@ cd "nano-${VERSION}"
 
 ./configure LDFLAGS=-static
 make
+strip ./src/nano
 upx ./src/nano
 mv ./src/nano ../bin/

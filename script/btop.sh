@@ -8,5 +8,6 @@ cd "btop"
 
 make GPU_SUPPORT=false STATIC=true
 
+strip ./bin/btop
 upx ./bin/btop
 mv ./bin/btop ../bin/
