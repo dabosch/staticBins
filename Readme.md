@@ -16,14 +16,18 @@ Compilation requires apptainer to be installed. This is not needed for executing
 |------|--------:|
 | [btop][btop] | 1.3.0   |
 | [fzf][fzf]   | 0.47.0  |
+| [gitui][gitui]*  | 2.5.8   |
 | [htop][htop] | 3.3.0   |
 | [nano][nano] | 7.2     |
-| [ncdu][ncdu] | 2.3     |
+| [ncdu][ncdu]* | 2.3     |
 | [nmon][nmon] | 16p     |
 | [nnn][nnn]   | 4.9     |
 | [pigz][pigz] | 2.8     |
 | [pv][pv]     | 1.8.5   |
+| [tig][tig]   | 2.5.8   |
 | [tree][tree] | 2.1.1   |
+
+\* Binaries marked with an asterisk are not compiled but downloaded precompiled from the projects' git repo. This is because I have not yet implemented compiling rust code, and the projects delived statically linked binaries anyway.
 
 
 [btop]:https://github.com/aristocratos/btop
@@ -36,3 +40,5 @@ Compilation requires apptainer to be installed. This is not needed for executing
 [pv]:http://www.ivarch.com/programs/pv.shtml
 [tree]:http://oldmanprogrammer.net/source.php?dir=projects/tree
 [fzf]:https://github.com/junegunn/fzf.git
+[tig]:https://github.com/jonas/tig
+[gitui]:https://github.com/extrawurst/gitui
