@@ -18,7 +18,7 @@ Compilation requires apptainer to be installed. This is not needed for executing
 | [btop][btop] | 1.3.0   |
 | [eza][eza]   | 0.18.9  |
 | [fzf][fzf]   | 0.47.0  |
-| [gitui][gitui]  | 2.5.8   |
+| [gitui][gitui]  | 0.25.1   |
 | [htop][htop] | 3.3.0   |
 | [nano][nano] | 7.2     |
 | [ncdu][ncdu]* | 2.3     |
