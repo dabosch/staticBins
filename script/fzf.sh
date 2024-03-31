@@ -5,7 +5,7 @@ URL="https://github.com/junegunn/fzf.git"
 git clone --depth 1 --branch "${VERSION}" "${URL}"
 
 cd fzf
-make bin/fzf
+CGO_ENABLED=0 make bin/fzf
 strip ./bin/fzf
 upx ./bin/fzf
 

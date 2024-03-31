@@ -1,11 +1,14 @@
 set -e
 VERSION="v0.25.1"
-URL="https://github.com/extrawurst/gitui/releases/download/${VERSION}/gitui-linux-musl.tar.gz"
+URL="https://github.com/extrawurst/gitui.git"
 
-wget "$URL"
-tar -xzf "gitui-linux-musl.tar.gz"
+git clone --depth 1 --branch "${VERSION}" "${URL}"
+cd "gitui"
 
-strip ./gitui
-upx ./gitui
-touch ./gitui
-mv ./gitui ./bin/
+rustup default stable
+rustup target add x86_64-unknown-linux-musl
+
+GITUI_RELEASE=1 cargo build --release --target=x86_64-unknown-linux-musl
+strip "target/x86_64-unknown-linux-musl/release/gitui"
+upx "target/x86_64-unknown-linux-musl/release/gitui"
+mv "target/x86_64-unknown-linux-musl/release/gitui" ../bin/

@@ -5,7 +5,7 @@ From:ubuntu:23.04
     apt update 
     PACKAGES=""
     # general setup
-    PACKAGES="${PACKAGES} build-essential wget git upx libncurses-dev libgpm-dev cmake"
+    PACKAGES="${PACKAGES} build-essential wget git upx libncurses-dev libgpm-dev cmake curl"
     # dependencies for building rsync
     PACKAGES="${PACKAGES} gcc g++ gawk autoconf automake python3-cmarkgfm \
     acl libacl1-dev attr libattr1-dev libxxhash-dev libzstd-dev \
@@ -16,8 +16,17 @@ From:ubuntu:23.04
     PACKAGES="${PACKAGES} golang-go"
     # nnn
     PACKAGES="${PACKAGES} libreadline-dev"
+    # musl
+    PACKAGES="${PACKAGES} musl-tools"
     
     apt install -y ${PACKAGES}
+
+    # Get Rust; NOTE: using sh for better compatibility with other base images
+    curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+%environment
+    # Add .cargo/bin to PATH
+    PATH="/root/.cargo/bin:${PATH}"
     
 %runscript
     bash "$@" 

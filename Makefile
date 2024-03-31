@@ -17,7 +17,7 @@ clean:
 
 .phony:tar
 tar:all
-	tar -cf "staticBins_dabosch_${TODAY}.tar" bin/
+	tar -cf "staticBins_dabosch_${TODAY}.tar" bin/ Readme.md
 
 buildcontainer.sif: | buildcontainer.txt
 	apptainer build --fakeroot buildcontainer.sif buildcontainer.txt
@@ -25,15 +25,14 @@ buildcontainer.sif: | buildcontainer.txt
 bin/% : script/%.sh
 	mkdir -p ./bin
 	mkdir -p temp
-	apptainer exec --no-home -B "./temp/:${HOME}" -B "./script:${HOME}/script:ro" -B "./bin:${HOME}/bin" -B "./code:${HOME}/code:ro" ./buildcontainer.sif "$<"
+	apptainer exec -c --no-home -B "./temp/:${HOME}" -B "./script:${HOME}/script:ro" -B "./bin:${HOME}/bin" -B "./code:${HOME}/code:ro" ./buildcontainer.sif "$<"
 	chmod -R 700 ./temp/
 	rm -rf ./temp/
-	# ./buildcontainer.sif $<
 
 $(SOURCES): %: bin/%
 
 interactive:
 	mkdir -p ./bin
 	mkdir -p temp
-	apptainer shell --no-home -B "./temp/:${HOME}" -B "./script:${HOME}/script:ro" -B "./bin:${HOME}/bin" -B "./code:${HOME}/code:ro" ./buildcontainer.sif
+	apptainer shell -c --no-home -B "./temp/:${HOME}" -B "./script:${HOME}/script:ro" -B "./bin:${HOME}/bin" -B "./code:${HOME}/code:ro" ./buildcontainer.sif
 	rm -rf ./temp/

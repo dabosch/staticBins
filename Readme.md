@@ -14,9 +14,11 @@ Compilation requires apptainer to be installed. This is not needed for executing
 ## List of tools
 | tool | version |
 |------|--------:|
+| [bat][bat]   | 0.24.0  |
 | [btop][btop] | 1.3.0   |
+| [eza][eza]   | 0.18.9  |
 | [fzf][fzf]   | 0.47.0  |
-| [gitui][gitui]*  | 2.5.8   |
+| [gitui][gitui]  | 2.5.8   |
 | [htop][htop] | 3.3.0   |
 | [nano][nano] | 7.2     |
 | [ncdu][ncdu]* | 2.3     |
@@ -24,13 +26,15 @@ Compilation requires apptainer to be installed. This is not needed for executing
 | [nnn][nnn]   | 4.9     |
 | [pigz][pigz] | 2.8     |
 | [pv][pv]     | 1.8.5   |
+| [ripgrep][rg]| 14.1.0  |
 | [tig][tig]   | 2.5.8   |
 | [tree][tree] | 2.1.1   |
 
-\* Binaries marked with an asterisk are not compiled but downloaded precompiled from the projects' git repo. This is because I have not yet implemented compiling rust code, and the projects delived statically linked binaries anyway.
+\* Binaries marked with an asterisk are not compiled but downloaded precompiled from the projects' git repo. This is because I have not yet implemented compiling their code, and the projects delived statically linked binaries anyway.
 
-
+[bat]:https://github.com/sharkdp/bat
 [btop]:https://github.com/aristocratos/btop
+[eza]:https://github.com/eza-community/eza
 [htop]:https://htop.dev/
 [nano]:https://www.nano-editor.org/
 [ncdu]:https://dev.yorhel.nl/ncdu
@@ -38,6 +42,7 @@ Compilation requires apptainer to be installed. This is not needed for executing
 [nnn]:https://github.com/jarun/nnn
 [pigz]:https://zlib.net/pigz/
 [pv]:http://www.ivarch.com/programs/pv.shtml
+[rg]:https://github.com/BurntSushi/ripgrep
 [tree]:http://oldmanprogrammer.net/source.php?dir=projects/tree
 [fzf]:https://github.com/junegunn/fzf.git
 [tig]:https://github.com/jonas/tig
